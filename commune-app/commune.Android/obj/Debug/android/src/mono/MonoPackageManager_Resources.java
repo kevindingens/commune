@@ -5,7 +5,6 @@ public class MonoPackageManager_Resources {
 		"commune.Android.dll",
 		"commune.dll",
 		"FormsViewGroup.dll",
-		"Newtonsoft.Json.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",

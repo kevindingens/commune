@@ -1,57 +1,39 @@
-﻿<Properties StartupConfiguration="multiprojId">
+﻿<Properties StartupConfiguration="{54C835D0-3386-45EF-A22E-33371379A275}|Default">
   <MonoDevelop.Ide.ItemProperties.commune.Android PreferredExecutionTarget="Android.Pixel_API_25" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="commune/App.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="commune/ViewModels/ItemsViewModel.cs">
     <Files>
-      <File FileName="commune/ViewModels/AboutViewModel.cs" Line="1" Column="1" />
-      <File FileName="commune/ViewModels/BaseViewModel.cs" Line="1" Column="1" />
-      <File FileName="commune.Android/MainActivity.cs" Line="13" Column="94" />
-      <File FileName="commune/App.xaml" Line="1" Column="1" />
-      <File FileName="commune/Views/ItemDetailPage.xaml" Line="1" Column="1" />
-      <File FileName="commune/Views/AboutPage.xaml" Line="4" Column="13" />
-      <File FileName="commune.Android/Properties/AssemblyInfo.cs" Line="1" Column="1" />
-      <File FileName="commune.iOS/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="commune/App.xaml.cs" Line="1" Column="1" />
+      <File FileName="commune/Views/LoginPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="commune/Views/Forms/EmailEntry.xaml" Line="6" Column="75" />
+      <File FileName="commune/Converters/StringToBooleanConverter.cs" Line="26" Column="60" />
+      <File FileName="commune/Converters/ErrorValidationColorConverter.cs" Line="38" Column="64" />
+      <File FileName="commune/ViewModels/ItemsViewModel.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="commune" expanded="True">
             <Node name="commune" expanded="True">
-              <Node name="Models" expanded="True" />
-              <Node name="Services" expanded="True" />
-              <Node name="ViewModels" expanded="True" />
-              <Node name="Views" expanded="True" />
-              <Node name="App.xaml" expanded="True">
-                <Node name="App.xaml.cs" selected="True" />
+              <Node name="Controls" expanded="True" />
+              <Node name="Converters" expanded="True" />
+              <Node name="ViewModels" expanded="True">
+                <Node name="LoginViewModel.cs" selected="True" />
               </Node>
-            </Node>
-            <Node name="commune.Android" expanded="True" />
-            <Node name="commune.iOS" expanded="True" />
-            <Node name="commune.MobileAppService" expanded="True">
-              <Node name="Controllers" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Forms" expanded="True">
+                  <Node name="EmailEntry.xaml" expanded="True" />
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.commune.MobileAppService PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations>
-    <MultiItemSolutionRunConfiguration Id="multiprojId" Name="Multiple Projects">
-      <Items>
-        <StartupItem ItemId="{5069DE36-A7FC-4D23-A942-B5B6B1F5D43F}" ItemName="commune.Android" />
-        <StartupItem ItemId="{47883B70-32D4-465A-80C3-EE21E08994A8}" ItemName="commune.iOS" />
-        <StartupItem ItemId="{CD8D50EE-065C-4FBD-8E2A-4D4E80CF83E8}" ItemName="commune.MobileAppService" />
-      </Items>
-    </MultiItemSolutionRunConfiguration>
-  </MultiItemStartupConfigurations>
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.commune.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.3BE3DF73-E9A9-4D4E-A3AA-A06626989A8B" />
 </Properties>

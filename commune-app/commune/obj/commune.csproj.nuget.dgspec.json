@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/kevindingens/Projects/commune/commune/commune.csproj": {}
+    "/Users/kevindingens/Projects/commune/commune-app/commune/commune.csproj": {}
   },
   "projects": {
-    "/Users/kevindingens/Projects/commune/commune/commune.csproj": {
+    "/Users/kevindingens/Projects/commune/commune-app/commune/commune.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kevindingens/Projects/commune/commune/commune.csproj",
+        "projectUniqueName": "/Users/kevindingens/Projects/commune/commune-app/commune/commune.csproj",
         "projectName": "commune",
-        "projectPath": "/Users/kevindingens/Projects/commune/commune/commune.csproj",
+        "projectPath": "/Users/kevindingens/Projects/commune/commune-app/commune/commune.csproj",
         "packagesPath": "/Users/kevindingens/.nuget/packages/",
-        "outputPath": "/Users/kevindingens/Projects/commune/commune/obj/",
+        "outputPath": "/Users/kevindingens/Projects/commune/commune-app/commune/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/kevindingens/.config/NuGet/NuGet.Config"
@@ -42,9 +42,21 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
-            "Newtonsoft.Json": {
+            "Syncfusion.Xamarin.Buttons": {
               "target": "Package",
-              "version": "[11.0.2, )"
+              "version": "[18.1.0.48, )"
+            },
+            "Syncfusion.Xamarin.Core": {
+              "target": "Package",
+              "version": "[18.1.0.48, )"
+            },
+            "Syncfusion.Xamarin.SfChart": {
+              "target": "Package",
+              "version": "[18.1.0.48, )"
+            },
+            "Syncfusion.Xamarin.SfListView": {
+              "target": "Package",
+              "version": "[18.1.0.48, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

@@ -1,4 +1,4 @@
-/Users/kevindingens/Projects/commune/commune.iOS/bin/iPhoneSimulator/Debug/commune.iOS.exe
+/Users/kevindingens/Projects/commune/commune-app/commune.iOS/bin/iPhoneSimulator/Debug/commune.iOS.exe
 /Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/mscorlib.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/../../64bits/Xamarin.iOS.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/System.dll
@@ -22,8 +22,7 @@
 /Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/System.Web.Services.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/System.Xml.Linq.dll
 /Users/kevindingens/.nuget/packages/xamarin.forms/4.4.0.991265/lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll
-/Users/kevindingens/Projects/commune/commune/bin/Debug/netstandard2.0/commune.dll
+/Users/kevindingens/Projects/commune/commune-app/commune/bin/Debug/netstandard2.0/commune.dll
 /Users/kevindingens/.nuget/packages/xamarin.forms/4.4.0.991265/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll
 /Users/kevindingens/.nuget/packages/xamarin.essentials/1.3.1/lib/xamarinios10/Xamarin.Essentials.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/OpenTK-1.0.dll
-/Users/kevindingens/.nuget/packages/newtonsoft.json/11.0.2/lib/netstandard2.0/Newtonsoft.Json.dll
