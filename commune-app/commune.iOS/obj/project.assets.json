@@ -74,6 +74,21 @@
           "lib/Xamarin.iOS10/Syncfusion.SfChart.XForms.iOS.dll": {}
         }
       },
+      "Syncfusion.Xamarin.SfComboBox/18.1.0.48": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "18.1.0.48",
+          "Xamarin.Forms": "3.6.0.344457"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        }
+      },
       "Syncfusion.Xamarin.SfListView/18.1.0.48": {
         "type": "package",
         "dependencies": {
@@ -245,8 +260,9 @@
           "Syncfusion.Xamarin.Buttons": "18.1.0.48",
           "Syncfusion.Xamarin.Core": "18.1.0.48",
           "Syncfusion.Xamarin.SfChart": "18.1.0.48",
+          "Syncfusion.Xamarin.SfComboBox": "18.1.0.48",
           "Syncfusion.Xamarin.SfListView": "18.1.0.48",
-          "Xamarin.Essentials": "1.3.1",
+          "Xamarin.Essentials": "1.5.3.1",
           "Xamarin.Forms": "4.4.0.991265"
         },
         "compile": {
@@ -330,6 +346,21 @@
           "lib/Xamarin.iOS10/Syncfusion.SfChart.XForms.iOS.dll": {}
         }
       },
+      "Syncfusion.Xamarin.SfComboBox/18.1.0.48": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "18.1.0.48",
+          "Xamarin.Forms": "3.6.0.344457"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        }
+      },
       "Syncfusion.Xamarin.SfListView/18.1.0.48": {
         "type": "package",
         "dependencies": {
@@ -501,8 +532,9 @@
           "Syncfusion.Xamarin.Buttons": "18.1.0.48",
           "Syncfusion.Xamarin.Core": "18.1.0.48",
           "Syncfusion.Xamarin.SfChart": "18.1.0.48",
+          "Syncfusion.Xamarin.SfComboBox": "18.1.0.48",
           "Syncfusion.Xamarin.SfListView": "18.1.0.48",
-          "Xamarin.Essentials": "1.3.1",
+          "Xamarin.Essentials": "1.5.3.1",
           "Xamarin.Forms": "4.4.0.991265"
         },
         "compile": {
@@ -586,6 +618,21 @@
           "lib/Xamarin.iOS10/Syncfusion.SfChart.XForms.iOS.dll": {}
         }
       },
+      "Syncfusion.Xamarin.SfComboBox/18.1.0.48": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "18.1.0.48",
+          "Xamarin.Forms": "3.6.0.344457"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        }
+      },
       "Syncfusion.Xamarin.SfListView/18.1.0.48": {
         "type": "package",
         "dependencies": {
@@ -757,8 +804,9 @@
           "Syncfusion.Xamarin.Buttons": "18.1.0.48",
           "Syncfusion.Xamarin.Core": "18.1.0.48",
           "Syncfusion.Xamarin.SfChart": "18.1.0.48",
+          "Syncfusion.Xamarin.SfComboBox": "18.1.0.48",
           "Syncfusion.Xamarin.SfListView": "18.1.0.48",
-          "Xamarin.Essentials": "1.3.1",
+          "Xamarin.Essentials": "1.5.3.1",
           "Xamarin.Forms": "4.4.0.991265"
         },
         "compile": {
@@ -842,6 +890,21 @@
           "lib/Xamarin.iOS10/Syncfusion.SfChart.XForms.iOS.dll": {}
         }
       },
+      "Syncfusion.Xamarin.SfComboBox/18.1.0.48": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "18.1.0.48",
+          "Xamarin.Forms": "3.6.0.344457"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        }
+      },
       "Syncfusion.Xamarin.SfListView/18.1.0.48": {
         "type": "package",
         "dependencies": {
@@ -1013,8 +1076,9 @@
           "Syncfusion.Xamarin.Buttons": "18.1.0.48",
           "Syncfusion.Xamarin.Core": "18.1.0.48",
           "Syncfusion.Xamarin.SfChart": "18.1.0.48",
+          "Syncfusion.Xamarin.SfComboBox": "18.1.0.48",
           "Syncfusion.Xamarin.SfListView": "18.1.0.48",
-          "Xamarin.Essentials": "1.3.1",
+          "Xamarin.Essentials": "1.5.3.1",
           "Xamarin.Forms": "4.4.0.991265"
         },
         "compile": {
@@ -1185,6 +1249,37 @@
         "lib/uap10.0/Syncfusion.SfChart.XForms.xml",
         "syncfusion.xamarin.sfchart.18.1.0.48.nupkg.sha512",
         "syncfusion.xamarin.sfchart.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.SfComboBox/18.1.0.48": {
+      "sha512": "S/CMUX7o0togZqGOtmL4HxDsqUG1sdn8KSLzIj/Eb7iHiTQVvxGU3KwXsvvPBSnI7G/xydPLFLkedcGcFAZYuA==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfcombobox/18.1.0.48",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.XML",
+        "lib/MonoAndroid10/Syncfusion.SfComboBox.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll",
+        "lib/netstandard2.0/Syncfusion.SfComboBox.XForms.XML",
+        "lib/netstandard2.0/Syncfusion.SfComboBox.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfComboBox.XForms.XML",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfComboBox.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.XML",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.pri",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Properties/Syncfusion.SfComboBox.XForms.UWP.rd.xml",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Syncfusion.SfComboBox.XForms.UWP.xr.xml",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Themes/Generic.xaml",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/darkthemeimage.png",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/dropdownbuttonimage.png",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.XML",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.dll",
+        "syncfusion.xamarin.sfcombobox.18.1.0.48.nupkg.sha512",
+        "syncfusion.xamarin.sfcombobox.nuspec"
       ]
     },
     "Syncfusion.Xamarin.SfListView/18.1.0.48": {
@@ -1633,5 +1728,20 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Essentials from 1.5.3.1 to 1.3.1. Reference the package directly from the project to select a different version. \n commune.iOS -> commune -> Xamarin.Essentials (>= 1.5.3.1) \n commune.iOS -> Xamarin.Essentials (>= 1.3.1)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
 }

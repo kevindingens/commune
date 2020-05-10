@@ -26,3 +26,16 @@
 /Users/kevindingens/.nuget/packages/xamarin.forms/4.4.0.991265/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll
 /Users/kevindingens/.nuget/packages/xamarin.essentials/1.3.1/lib/xamarinios10/Xamarin.Essentials.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/OpenTK-1.0.dll
+/Users/kevindingens/.nuget/packages/syncfusion.xamarin.core/18.1.0.48/lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll
+/Users/kevindingens/.nuget/packages/syncfusion.licensing/18.1.0.48/lib/Xamarin.iOS10/Syncfusion.Licensing.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/Facades/System.Runtime.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/Facades/System.Resources.ResourceManager.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/Facades/System.Reflection.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/Facades/System.Collections.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/Facades/System.Text.RegularExpressions.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/Facades/System.Runtime.Extensions.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/Facades/System.Linq.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/Facades/System.Reflection.Extensions.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/13.16.0.13/lib/mono/Xamarin.iOS/Facades/System.Text.Encoding.dll
+/Users/kevindingens/.nuget/packages/syncfusion.xamarin.buttons/18.1.0.48/lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.dll
+/Users/kevindingens/.nuget/packages/syncfusion.xamarin.sfcombobox/18.1.0.48/lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll

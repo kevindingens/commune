@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
+using Xamarin.Forms.Xaml;
 
 namespace commune.Views.Forms
 {
-    public partial class EmailEntry : ContentPage
+    [Preserve(AllMembers = true)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class EmailEntry
     {
         public EmailEntry()
         {
