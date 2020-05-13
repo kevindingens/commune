@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:labels="clr-namespace:Commune.Views.Items.Labels"
+             xmlns:vm="clr-namespace:Commune.ViewModels"
+             mc:Ignorable="d"
+             x:Class="Commune.Views.LoginPage">
+
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid RowSpacing="0" ColumnSpacing="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="ContentGrid"  Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="0"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <labels:TitleLabel Grid.Row="0" Text="Welcome To Commune" HorizontalTextAlignment="Center"></labels:TitleLabel>
+            <Label Grid.Row="1" Text="Login or sign up" HorizontalTextAlignment="Center" FontSize="Caption" Margin="10"/>
+            <Entry Grid.Row="3" VerticalOptions="Fill" Placeholder="Email"/>
+            <Button Grid.Row="5" VerticalOptions="Fill" Text="Login / Sign up"
+                Clicked="LoginButtonPressed" />
+        </Grid>
+    </Grid>
+</ContentPage>
