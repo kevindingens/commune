@@ -20,7 +20,7 @@ namespace Commune.Views
         public void LoginButtonPressed(object sender, System.EventArgs e)
         {
             var passwordEntry = new Entry { VerticalOptions = LayoutOptions.Fill, Placeholder = "Password" };
-            ContentGrid.Children.Add(passwordEntry, 4, 0);
+            ContentGrid.Children.Add(passwordEntry, 0, 4);
             ContentGrid.RowDefinitions.ElementAt(4).Height = GridLength.Auto;
         }
     }

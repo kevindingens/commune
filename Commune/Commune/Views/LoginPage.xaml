@@ -4,13 +4,20 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:labels="clr-namespace:Commune.Views.Items.Labels"
-             xmlns:vm="clr-namespace:Commune.ViewModels"
+             xmlns:vm="clr-namespace:Commune.ViewModels" xmlns:converter="clr-namespace:Commune.Converters" xmlns:triggers="clr-namespace:Commune.Triggers"
              mc:Ignorable="d"
              x:Class="Commune.Views.LoginPage">
 
     <ContentPage.BindingContext>
         <vm:LoginViewModel />
     </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:StringToBooleanConverter x:Key="StringToBooleanConverter" />
+            <converter:ErrorValidationColorConverter x:Key="ErrorValidationColorConverter" PageVariantParameter="0" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
     <Grid RowSpacing="0" ColumnSpacing="0">
         <Grid.ColumnDefinitions>
@@ -24,6 +31,9 @@
         </Grid.RowDefinitions>
 
         <Grid x:Name="ContentGrid"  Grid.Column="1" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
@@ -32,11 +42,24 @@
                 <RowDefinition Height="0"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-            <labels:TitleLabel Grid.Row="0" Text="Welcome To Commune" HorizontalTextAlignment="Center"></labels:TitleLabel>
-            <Label Grid.Row="1" Text="Login or sign up" HorizontalTextAlignment="Center" FontSize="Caption" Margin="10"/>
-            <Entry Grid.Row="3" VerticalOptions="Fill" Placeholder="Email"/>
-            <Button Grid.Row="5" VerticalOptions="Fill" Text="Login / Sign up"
-                Clicked="LoginButtonPressed" />
+            <labels:TitleLabel Grid.Column="0" Grid.Row="0" Text="Welcome To Commune" HorizontalTextAlignment="Center"></labels:TitleLabel>
+            <Label Grid.Column="0" Grid.Row="1" Text="Login or sign up" HorizontalTextAlignment="Center" FontSize="Caption" Margin="10"/>
+            <Entry x:Name="Email" Grid.Column="0" Grid.Row="3" VerticalOptions="Fill" Placeholder="Email" Text="{Binding Email}"
+                 TextColor="{Binding Path=IsFocused, 
+                Source={x:Reference Email}, 
+                Converter={x:StaticResource ErrorValidationColorConverter}, 
+                ConverterParameter={x:Reference Email}}">
+                <Entry.Triggers>
+                    <Trigger TargetType="Entry"
+                             Property="Entry.IsFocused" Value="True">
+                        <Trigger.ExitActions>
+                            <triggers:EmailTrigger/>
+                        </Trigger.ExitActions>
+                    </Trigger>
+                </Entry.Triggers>
+            </Entry>
+            <Button Grid.Column="0" Grid.Row="5" VerticalOptions="Fill" Text="{Binding LoginText}"
+                Clicked="LoginButtonPressed" BackgroundColor="Azure"/>
         </Grid>
     </Grid>
 </ContentPage>
