@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Commune.Shared.Auth;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,16 +13,30 @@ namespace Commune.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
+        IAuth auth;
+
         public LoginPage()
         {
             InitializeComponent();
+            auth = DependencyService.Get<IAuth>();
         }
 
-        public void LoginButtonPressed(object sender, System.EventArgs e)
+        async void LoginButtonPressed(object sender, EventArgs e)
         {
-            var passwordEntry = new Entry { VerticalOptions = LayoutOptions.Fill, Placeholder = "Password" };
-            ContentGrid.Children.Add(passwordEntry, 4, 0);
-            ContentGrid.RowDefinitions.ElementAt(4).Height = GridLength.Auto;
+            string Token = await auth.LoginWithEmailPassword(emailInput.Text, passwordInput.Text);
+            if (Token != "")
+            {
+                await Navigation.PushAsync(new MainPage());
+            }
+            else
+            {
+                ShowError();
+            }
+        }
+
+        async private void ShowError()
+        {
+            await DisplayAlert("Authentication Failed", "E-mail or password are incorrect. Try again!", "OK");
         }
     }
 }
