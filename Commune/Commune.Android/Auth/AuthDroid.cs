@@ -12,6 +12,7 @@ using Android.Views;
 using Android.Widget;
 using Commune.Droid.Auth;
 using Commune.Shared.Auth;
+using Commune.Shared.Enums;
 using Firebase.Auth;
 
 [assembly: Xamarin.Forms.Dependency(typeof(AuthDroid))]
@@ -19,18 +20,56 @@ namespace Commune.Droid.Auth
 {
     public class AuthDroid: IAuth
     {
-        public async Task<string> LoginWithEmailPassword(string email, string password)
+        public async Task<(LoginResult, string)> LoginWithEmailPassword(string email, string password)
         {
             try
             {
                 var user = await FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync(email, password);
                 var token = await user.User.GetIdTokenAsync(false);
-                return token.Token;
+                return (LoginResult.Success, token.Token);
             }
             catch (FirebaseAuthInvalidUserException e)
             {
                 e.PrintStackTrace();
-                return "";
+                return (LoginResult.LoginInvalidUser, string.Empty);
+            }
+            catch (FirebaseAuthInvalidCredentialsException e)
+            {
+                e.PrintStackTrace();
+                return (LoginResult.LoginInvalidPassword, string.Empty);
+            }
+            catch (Exception e)
+            {
+                return (LoginResult.Fail, string.Empty);
+            }
+        }
+
+        public async Task<(LoginResult, string)> SignUpWithEmailPassword(string email, string password)
+        {
+            try
+            {
+                var user = await FirebaseAuth.Instance.CreateUserWithEmailAndPasswordAsync(email, password);
+                var token = await user.User.GetIdTokenAsync(false);
+                return (LoginResult.Success, token.Token);
+            }
+            catch (FirebaseAuthWeakPasswordException e)
+            {
+                e.PrintStackTrace();
+                return (LoginResult.SignUpWeakPassword, string.Empty);
+            }
+            catch (FirebaseAuthInvalidCredentialsException e)
+            {
+                e.PrintStackTrace();
+                return (LoginResult.SignUpBadEmail, string.Empty);
+            }
+            catch (FirebaseAuthUserCollisionException e)
+            {
+                e.PrintStackTrace();
+                return (LoginResult.SignUpUserExists, string.Empty);
+            }
+            catch (Exception e)
+            {
+                return (LoginResult.Fail, string.Empty);
             }
         }
     }

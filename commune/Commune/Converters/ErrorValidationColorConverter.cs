@@ -33,7 +33,7 @@ namespace Commune.Converters
 
             if (!(emailEntry?.BindingContext is LoginViewModel bindingContext))
             {
-                return Color.Blue;
+                return Color.Red;
             }
 
             var isFocused = (bool)value;
@@ -41,10 +41,10 @@ namespace Commune.Converters
 
             if (isFocused)
             {
-                return Color.Green;
+                return Color.Black;
             }
 
-            return bindingContext.IsInvalidEmail ? Color.FromHex("#FF4A4A") : Color.Blue;
+            return bindingContext.IsInvalidEmail ? Color.Red : Color.Black;
 
         }
 

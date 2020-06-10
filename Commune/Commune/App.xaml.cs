@@ -14,7 +14,8 @@ namespace Commune
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new LoginPage();
+            MainPage = new NavigationPage(new LoginPage());
+            NavigationPage.SetHasNavigationBar(MainPage, false);
         }
 
         protected override void OnStart()

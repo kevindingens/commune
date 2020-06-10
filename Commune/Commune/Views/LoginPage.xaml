@@ -38,6 +38,7 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <labels:TitleLabel Grid.Row="0" Text="Welcome To Commune" HorizontalTextAlignment="Center"></labels:TitleLabel>
             <Label Grid.Row="1" Text="Login or sign up" HorizontalTextAlignment="Center" FontSize="Caption" Margin="10"/>
@@ -55,9 +56,10 @@
                     </Trigger>
                 </Entry.Triggers>
             </Entry>
-            <Entry x:Name="passwordInput" Grid.Row="4" VerticalOptions="Fill" Placeholder="Password" IsPassword="true"/>
-            <Button Grid.Row="5" VerticalOptions="Fill" Text="Login / Sign up"
-                Clicked="LoginButtonPressed" />
+            <Entry x:Name="passwordInput" Grid.Row="4" VerticalOptions="Fill" Placeholder="Password" IsPassword="true" Text="{Binding Password}" IsVisible="{Binding ShowPassword}"/>
+            <Entry x:Name="confirmPasswordInput" Grid.Row="5" VerticalOptions="Fill" Placeholder="Confirm Password" IsPassword="true" Text="{Binding ConfirmPassword}" IsVisible="{Binding ShowConfirmPassword}"/>
+            <Button Grid.Row="6" VerticalOptions="Fill" Text="{Binding LoginText}"
+                Command="{Binding LoginCommand}" />
         </Grid>
     </Grid>
 </ContentPage>
