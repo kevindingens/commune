@@ -1,4 +1,5 @@
-﻿using Commune.Shared.Auth;
+﻿using Commune.Services.TokenWrapper;
+using Commune.Shared.Auth;
 using Commune.Shared.Enums;
 using Commune.Views;
 using System;
@@ -13,8 +14,7 @@ namespace Commune.ViewModels
 {
     class LoginViewModel: BaseViewModel, INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-
+        ITokenWrapper tokenWrapper;
         IAuth auth;
 
         private string email;
@@ -38,14 +38,14 @@ namespace Commune.ViewModels
 
                 this.loginState = value;
                 this.OnPropertyChanged();
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ShowPassword"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ShowConfirmPassword"));
+                this.OnPropertyChanged("ShowPassword");
+                this.OnPropertyChanged("ShowConfirmPassword");
             }
         }
 
         public string LoginText
         {
-            get { return this.LoginText; }
+            get { return this.loginText; }
             set
             {
                 if (this.loginText == value)
@@ -91,11 +91,12 @@ namespace Commune.ViewModels
             auth = DependencyService.Get<IAuth>();
         }
 
-        async void Login(object sender, EventArgs e)
+        async Task Login()
         {
             var result = await auth.LoginWithEmailPassword(Email, Password);
             if (result.Item1 == LoginResult.Success)
             {
+                tokenWrapper.SaveCredentials(result.Item2);
                 await App.Current.MainPage.Navigation.PushAsync(new MainPage());
             }
             else
@@ -104,11 +105,12 @@ namespace Commune.ViewModels
             }
         }
 
-        async void SignUp(object sender, EventArgs e)
+        async Task SignUp()
         {
             var result = await auth.SignUpWithEmailPassword(Email, Password);
             if (result.Item1 == LoginResult.Success)
             {
+                tokenWrapper.SaveCredentials(result.Item2);
                 await App.Current.MainPage.Navigation.PushAsync(new MainPage());
             }
             else
@@ -119,7 +121,7 @@ namespace Commune.ViewModels
 
         async Task<bool> EmailExists(string email)
         {
-            var result = await auth.SignUpWithEmailPassword(Email, string.Empty);
+            var result = await auth.SignUpWithEmailPassword(Email, "x_test_pwd");
             var exists = result.Item1 == LoginResult.SignUpUserExists;
 
             LoginText = exists ? "Login" : "Sign Up";
@@ -149,7 +151,7 @@ namespace Commune.ViewModels
             }
         }
 
-        public async void EmailFormExited()
+        public async Task EmailFormExited()
         {
             if (this.isInvalidEmail)
             {
@@ -167,25 +169,13 @@ namespace Commune.ViewModels
         {
             if (LoginState == LoginStates.Login)
             {
-                var loginResult = await auth.LoginWithEmailPassword(Email, Password);
-                if (loginResult.Item1 == LoginResult.Success)
-                {
-                    await App.Current.MainPage.Navigation.PushAsync(new MainPage());
-                } else
-                {
-                    ShowError(loginResult.Item1);
-                }
+                await Login();
             } else if (LoginState == LoginStates.SignUp)
             {
-                var signupResult = await auth.SignUpWithEmailPassword(Email, Password);
-                if (signupResult.Item1 == LoginResult.Success)
-                {
-                    await App.Current.MainPage.Navigation.PushAsync(new MainPage());
-                }
-                else
-                {
-                    ShowError(signupResult.Item1);
-                }
+                await SignUp();
+            } else
+            {
+                await EmailFormExited();
             }
         }
     }

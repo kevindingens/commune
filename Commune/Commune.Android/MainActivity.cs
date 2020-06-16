@@ -7,6 +7,9 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Firebase;
+using Xamarin.Forms;
+using Commune.Shared.Auth;
+using Commune.Droid.Auth;
 
 namespace Commune.Droid
 {
@@ -20,7 +23,9 @@ namespace Commune.Droid
 
             base.OnCreate(savedInstanceState);
 
-            var f = FirebaseApp.InitializeApp(Application.Context);
+            DependencyService.Register<IAuth, AuthDroid>();
+
+            var f = FirebaseApp.InitializeApp(this);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);

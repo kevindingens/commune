@@ -1,4 +1,5 @@
-﻿using Commune.Shared.Auth;
+﻿using Commune.Services.TokenWrapper;
+using Commune.Shared.Auth;
 using Commune.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -14,13 +15,23 @@ namespace Commune.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
-        LoginViewModel loginViewModel;
+        ITokenWrapper tokenWrapper;
+
         public LoginPage()
         {
             NavigationPage.SetHasNavigationBar(this, false);
-            loginViewModel = new LoginViewModel();
             InitializeComponent();
-            BindingContext = loginViewModel;
+        }
+
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+            tokenWrapper = DependencyService.Get<ITokenWrapper>();
+            var tokenResult = tokenWrapper.GetGredentials();
+            if (!string.IsNullOrWhiteSpace(tokenResult.Result))
+            {
+                await App.Current.MainPage.Navigation.PushAsync(new MainPage());
+            }
         }
     }
 }

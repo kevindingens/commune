@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using Commune.iOS.Auth;
+using Commune.Shared.Auth;
 using Foundation;
 using UIKit;
+using Xamarin.Forms;
 
 namespace Commune.iOS
 {
@@ -24,6 +26,8 @@ namespace Commune.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
+
+            DependencyService.Register<IAuth, AuthIOS>();
 
             Firebase.Core.App.Configure();
             return base.FinishedLaunching(app, options);

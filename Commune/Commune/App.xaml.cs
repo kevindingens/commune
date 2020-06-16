@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Commune.Services;
 using Commune.Views;
+using Commune.Services.TokenWrapper;
 
 namespace Commune
 {
@@ -13,7 +14,7 @@ namespace Commune
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
+            DependencyService.Register<ITokenWrapper, TokenWrapper>();
             MainPage = new NavigationPage(new LoginPage());
             NavigationPage.SetHasNavigationBar(MainPage, false);
         }
